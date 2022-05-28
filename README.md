@@ -11,11 +11,11 @@ friends!
 
 That starter repository contains the following files:
 
-* **mole-head.png** which contains the image of the mole's head.
-* **mole-hill.png** which contains the image of the dirt pile.
-* **mole.css** which is the file in which you will write your CSS.
-* **mole.html** which is the file in which you will write your HTML.
-* **mole.js** which is the file which contains the JavaScript that controls the game.
+- **mole-head.png** which contains the image of the mole's head.
+- **mole-hill.png** which contains the image of the dirt pile.
+- **mole.css** which is the file in which you will write your CSS.
+- **mole.html** which is the file in which you will write your HTML.
+- **mole.js** which is the file which contains the JavaScript that controls the game.
 
 > Note: In these files, you will add your own HTML and CSS code, and you will
 > also be given some code. It is important to leave any commented-out code as-is
@@ -80,10 +80,10 @@ these HTML elements.
 > about this convention during the course._
 
 | Class name                             | BEM type | Reason for existing                                                   |
-|----------------------------------------|----------|-----------------------------------------------------------------------|
+| -------------------------------------- | -------- | --------------------------------------------------------------------- |
 | wgs (short for "whackable game space") | Block    | Used to encapsulate all of the things that are needed to whack a mole |
-| wgs__mole-head                         | Element  | Used to target the mole head                                          |
-| wgs__dirt-pile                         | Element  | Used to target the dirt pile                                          |
+| wgs\_\_mole-head                       | Element  | Used to target the mole head                                          |
+| wgs\_\_dirt-pile                       | Element  | Used to target the dirt pile                                          |
 
 Using those (or whatever you dreamed up), add those classes to the appropriate
 targets, the `div` and the two `img` elements.
@@ -186,15 +186,13 @@ all of the other code. If you used different CSS class names in your code,
 adjust the code below to target the CSS class names that you used.
 
 ```js
-window.addEventListener('DOMContentLoaded', () => {
-
+window.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
-    const moleHeads = document.querySelectorAll('.wgs__mole-head');
+    const moleHeads = document.querySelectorAll(".wgs__mole-head");
     for (let moleHead of moleHeads) {
-      moleHead.classList.toggle('wgs__mole-head--hidden');
+      moleHead.classList.toggle("wgs__mole-head--hidden");
     }
   }, 1000);
-
 });
 ```
 
@@ -280,7 +278,6 @@ The provided JavaScript code directs the game to popup a random mole 30 times. T
 scoreboard keeps track of how many moles you are able to whack out of the 30
 times they pop up. Play with your friends - the player with the highest score wins!
 
-
 ## Bonus - Animate a "whacked" mole
 
 If you're up for it, try to improve the game by creating some kind of visual
@@ -295,25 +292,23 @@ Finally, apply some CSS rules to the **mole.css** file to make something cool
 happen when a mole is whacked. What CSS properties could be useful here? Look at the
 example below, and then come up with your own ideas.
 
-
 ![Final game movie]
 
-[Mole game screenshot]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/whack-a-mole-2.png
-[Mole head and hill]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-top-down.png
-[Mole head and hill layers]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-layers.png
-[Absolutely positioned pink and blue boxes]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/layout/assets/absolute-blue-box.png
+[mole game screenshot]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/whack-a-mole-2.png
+[mole head and hill]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-top-down.png
+[mole head and hill layers]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-layers.png
+[absolutely positioned pink and blue boxes]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/layout/assets/absolute-blue-box.png
 [img documentation]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img
-[Mole images unstyled]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-unstyled.png
-[Mole images layered]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-layered.png
-[Mole image dimensions]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-top-down.png
-[Mole images positioned]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-positioned.png
-[Game spaces inline block]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/games-spaces-inline-block.png
-[Unclipped mole head]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-head-beneath-dirt-pile-unclipped.png
-[Clipped mole head]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-head-beneath-dirt-pile-clipped.png
-[Moles popping up and down]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-popping-up-and-down.gif
-[Eight moles not in a grid]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-playing-field-of-eight.png
-[Eight moles in a grid]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-playing-field-in-grid.png
-[Empty playing field]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-game-1.png
-[Moles randomly popping up]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-randomly-popping-up.gif
-[Final game movie]:
-https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-bonus-final.gif
+[mole images unstyled]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-unstyled.png
+[mole images layered]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-layered.png
+[mole image dimensions]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-hill-top-down.png
+[mole images positioned]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-images-positioned.png
+[game spaces inline block]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/games-spaces-inline-block.png
+[unclipped mole head]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-head-beneath-dirt-pile-unclipped.png
+[clipped mole head]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-head-beneath-dirt-pile-clipped.png
+[moles popping up and down]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-popping-up-and-down.gif
+[eight moles not in a grid]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-playing-field-of-eight.png
+[eight moles in a grid]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-playing-field-in-grid.png
+[empty playing field]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/mole-game-1.png
+[moles randomly popping up]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-randomly-popping-up.gif
+[final game movie]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Responsive-Design/interactivity/assets/moles-bonus-final.gif
